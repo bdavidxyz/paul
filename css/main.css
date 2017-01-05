@@ -410,8 +410,11 @@ body {
   font-size: 1.8rem;
   background-color: #fff;
   color: #000;
-  font-family: "Lora", sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.5; }
+
+.fonts-loaded body {
+  font-family: "Lora", sans-serif; }
 
 a {
   color: #333; }
