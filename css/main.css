@@ -1987,13 +1987,13 @@ ul.is-unstyled, ul.unstyled {
 .xlbiggest {
   font-size: 4em; }
 
-@media (min-height: 768px) and (max-height: 1199px) {
-  .v-medium-visible {
-    display: block !important; } }
-@media (min-height: 1200px) {
-  /* layouts for large screens */
-  .v-large-visible {
-    display: block !important; } }
+.v-medium-visible {
+  display: block !important; }
+
+/* layouts for large screens */
+.v-large-visible {
+  display: block !important; }
+
 @media screen and (max-width: 991px) {
   html {
     font-size: 52.5%; } }
