@@ -1,0 +1,13 @@
+@media (max-width: 544px) {
+  html {
+    @include respond-to("tiny") {
+      font-size: 52.5%;
+    }
+  }
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  padding: 30px 30px;
+}

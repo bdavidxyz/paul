@@ -4,20 +4,40 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<!-- 
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+MENU SECTION 
+
+
+
+-->
+<div class="menu-section flex-container flex-container-h  wrapper w960p">
+ Im the menu
+</div>
+
+<!-- 
+
+
+
+HERO SECTION 
+
+
+
+-->
+<div class="hero-section mtxlp flex-container flex-container-v">
+  <div class="wrapper w960p">
+    <h1 class="xbiggest flex-item-center txtcenter">Jekyll startup starter</h1>
+    <p class="biggest flex-item-center h1-like txtcenter">Or how to startup a small business efficiently</p>
+  </div>
+
+  <button class="button-primary flex-item-center mtl"> Call To Action</button>
 
 </div>
+
+
+
+</div>
+
