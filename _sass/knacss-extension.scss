@@ -20,3 +20,19 @@
 .#{$kna-namespace}xlbiggest {
   font-size: 4em;
 }
+
+
+@media (min-height: ($small + 1)) and (max-height: $large) {
+
+  .#{$kna-namespace}v-medium-visible {
+    display: block !important;
+  }
+}
+
+@media (min-height: ($large + 1)) {
+
+  /* layouts for large screens */
+  .#{$kna-namespace}v-large-visible {
+    display: block !important;
+  }
+}
