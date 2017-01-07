@@ -2312,6 +2312,12 @@ input[type="button"].button-primary:focus {
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
 
+.vh30 {
+  margin-top: 20vh; }
+  @media screen and (max-width: 991px) {
+    .vh30 {
+      margin-top: 5vh; } }
+
 .Media {
   display: flex;
   align-items: flex-start; }
