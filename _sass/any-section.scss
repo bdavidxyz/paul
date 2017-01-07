@@ -1,8 +1,6 @@
-@media (max-width: 544px) {
-  html {
-    @include respond-to("tiny") {
-      font-size: 52.5%;
-    }
+html {
+  @include respond-to("medium") {
+    font-size: 52.5%;
   }
 }
 
