@@ -40,3 +40,16 @@
     display: block !important;
   }
 }
+
+
+h3, .#{$kna-namespace}h3-like {
+  @if $font-stack-headings != $font-stack-common {
+    font-family: $font-stack-headings;
+  }
+}
+
+h4, .#{$kna-namespace}h4-like {
+  @if $font-stack-headings != $font-stack-common {
+    font-family: $font-stack-headings;
+  }
+}
