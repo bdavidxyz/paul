@@ -123,10 +123,10 @@ gulp.task('optimize-js-prod', ['optimize-css-prod'], function() {
 gulp.task('optimize-html-prod', ['optimize-js-prod'], function() {
 	return gulp.src('_site/**/*.html')
 
- //  .pipe(replace(/<link rel=\"stylesheet\" href=\"\/public\/css\/all.min.css\"[^>]*>/, function(s) {
- //     var style = fs.readFileSync('_site/public/css/all.min.css', 'utf8');
- //     return '<style>' + style + '</style>';
- // }))
+  .pipe(replace(/<link rel=\"stylesheet\" href=\"\/public\/css\/all.min.css\"[^>]*>/, function(s) {
+     var style = fs.readFileSync('_site/public/css/all.min.css', 'utf8');
+     return '<style>' + style + '</style>';
+ }))
   .pipe(replace(/<!--startjs-->[^]+<!--endjs-->/, function(s) {
      var js_script = fs.readFileSync('_site/public/js/all.min.js', 'utf8');
      return '<script type="text/javascript">' + js_script + '</script>';
