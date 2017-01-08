@@ -5,6 +5,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  transition: all 1s ease;
   display: inline-block;
   height: 78px;
   padding: 0 30px;
@@ -63,4 +64,12 @@ input[type="button"].button-primary:focus {
   @include respond-to("small") {
     margin-top: 5vh;
   }
+}
+
+.is-sticky button.main-cta {
+  font-size: $h4-size;
+  height: 48px;
+  transition: all 1s ease;
+  margin-top: $medium-value;
+  width: 150px;
 }

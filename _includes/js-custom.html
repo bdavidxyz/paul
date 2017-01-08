@@ -3,4 +3,14 @@
   $('button').on('click', function(){
   $('body').toggleClass('open');
 });
+   $(".main-cta").sticky({
+    // center:true,
+    responsiveWidth: true,
+    getWidthFrom:'.w150p'
+  });
+  $('.main-cta').on('sticky-start', function() { console.log("Started"); });
+  $('.main-cta').on('sticky-end', function() { console.log("Ended"); });
+  $('.main-cta').on('sticky-update', function() { console.log("Update"); });
+  $('.main-cta').on('sticky-bottom-reached', function() { console.log("Bottom reached"); });
+  $('.main-cta').on('sticky-bottom-unreached', function() { console.log("Bottom unreached"); });
 </script>
