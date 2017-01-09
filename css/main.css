@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*!
+/*
 * www.KNACSS.com V6.0.5 (1er décembre 2016) @author: Alsacreations, Raphael Goetter
 * Licence WTFPL http://www.wtfpl.net/
 */
@@ -23,7 +23,7 @@
 /* ---------------------------------- */
 /* ==Normalize (basic reset)          */
 /* ---------------------------------- */
-/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+/* normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
@@ -1997,6 +1997,12 @@ ul.is-unstyled, ul.unstyled {
   /* layouts for large screens */
   .v-large-visible {
     display: block !important; } }
+h3, .h3-like {
+  font-family: "Open Sans", sans-serif; }
+
+h4, .h4-like {
+  font-family: "Open Sans", sans-serif; }
+
 @media screen and (max-width: 991px) {
   html {
     font-size: 52.5%; } }
@@ -2257,6 +2263,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
+  transition: all 1s ease;
   display: inline-block;
   height: 78px;
   padding: 0 30px;
@@ -2319,6 +2326,13 @@ input[type="button"].button-primary:focus {
     .hero-fold-hack {
       margin-top: 5vh; } }
 
+.is-sticky button.main-cta {
+  font-size: 2rem;
+  height: 48px;
+  transition: all 1s ease;
+  margin-top: 2rem;
+  width: 150px; }
+
 .Media {
   display: flex;
   align-items: flex-start; }
@@ -2333,30 +2347,25 @@ input[type="button"].button-primary:focus {
   width: 95%;
   margin: 3em auto; }
 
-.masonry {
-  margin: 1.5em 0;
+.faq-masonry {
   padding: 0;
-  column-gap: 1.5em;
-  font-size: .85em; }
+  column-gap: 1.5em; }
 
-.item {
+.faq-masonry-item {
   background: grey;
   display: inline-block;
   background: #fff;
-  padding: 1em;
-  margin: 0 0 1.5em;
-  width: 100%;
-  box-sizing: border-box; }
+  margin: 0 0 1.5em; }
 
 @media only screen and (min-width: 400px) {
-  .masonry {
+  .faq-masonry {
     column-count: 2; } }
 @media only screen and (min-width: 700px) {
-  .masonry {
+  .faq-masonry {
     column-count: 3; } }
 @media only screen and (min-width: 900px) {
-  .masonry {
+  .faq-masonry {
     column-count: 3; } }
 @media only screen and (min-width: 1100px) {
-  .masonry {
+  .faq-masonry {
     column-count: 3; } }
