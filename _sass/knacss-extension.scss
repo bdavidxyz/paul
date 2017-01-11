@@ -57,3 +57,17 @@ h4, .#{$kna-namespace}h4-like {
 .#{$kna-namespace}big {
   font-size: 1.25em;
 }
+
+
+.Media {
+  display: flex;
+  align-items: flex-start;
+}
+
+.Media-figure {
+  margin-right: $small-value;
+}
+
+.Media-body {
+  flex: 1;
+}

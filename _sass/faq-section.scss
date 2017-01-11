@@ -9,14 +9,15 @@
 
 .faq-masonry {
     padding: 0;
-    column-gap: 1.5em;
+    column-gap: $large-value;
 }
 
 .faq-masonry-item {
     background: grey;
     display: inline-block;
     background: #fff;
-    margin: 0 0 1.5em;
+    // margin: 1.5em 0 0 0;
+    // margin: 0 0 1.5em 0;
 }
 
 @media only screen and (min-width: 400px) {
