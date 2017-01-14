@@ -6,17 +6,19 @@
   });
   $('.main-cta').on('sticky-start', function() { 
     $('.main-cta').text('Github');
+    $('body').toggleClass('is-sticky');
   });
   $('.main-cta').on('sticky-end', function() { 
     $('.main-cta').text('Get it from Github');
+    $('body').toggleClass('is-sticky');
   });
-  $( window ).resize(function() {
-    $(".main-cta").unstick();
-    $(".main-cta").sticky({
-      responsiveWidth: true,
-      getWidthFrom:'.w150p'
-    });
-  });
+  // $( window ).resize(function() {
+  //   $(".main-cta").unstick();
+  //   $(".main-cta").sticky({
+  //     responsiveWidth: true,
+  //     getWidthFrom:'.w150p'
+  //   });
+  // });
 
 
 
