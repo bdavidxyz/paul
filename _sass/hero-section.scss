@@ -66,10 +66,17 @@ input[type="button"].button-primary:focus {
   }
 }
 
+button.main-cta {
+ font-size: $medium-value;
+ padding: 0 10px;
+ @include respond-to("tiny-up") {
+  padding: 0 15px;
+  font-size: $medium-plus-value;
+ } 
+}
+
 .is-sticky button.main-cta {
-  font-size: $h4-size;
   height: 48px;
   transition: all 1s ease;
   margin-top: $medium-value;
-  width: 150px;
 }
