@@ -14,9 +14,16 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 .twitter-tweet {
   color: $color1;
   width: auto;
+  @extend .pal;
+  padding-bottom: 0;
 }
 
 .j-poster {
+  display: flex;
+  flex-direction: column;
+}
+
+.j-poster-header {
   display: flex;
   flex-direction: row;
 }
@@ -24,6 +31,10 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 .j-poster-img {
   width: 30px;
   height: 30px;
+}
+
+.j-poster-icon {
+  margin-left: auto;
 }
 
 .j-poster-tweet {
