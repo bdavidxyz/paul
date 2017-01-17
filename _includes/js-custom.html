@@ -12,21 +12,33 @@
     $('.main-cta').text('Get it from Github');
     $('body').toggleClass('is-sticky');
   });
-  // $( window ).resize(function() {
-  //   $(".main-cta").unstick();
-  //   $(".main-cta").sticky({
-  //     responsiveWidth: true,
-  //     getWidthFrom:'.w150p'
-  //   });
-  // });
+
+function toggleNavigation() {
+
+  if ($('body').hasClass("is-expanded")) {
+    $('body').removeClass("is-expanded")
+  } else {
+    $('body').addClass("is-expanded")
+  }
+
+  if ($('#nav-toggle').hasClass("active")) {
+    $('#nav-toggle').removeClass("active")
+  } else {
+    $('#nav-toggle').addClass("active")
+  }
+
+}
+
 $(document).ready(function(){
-document.querySelector( "#nav-toggle" ).addEventListener( "click", function() {
-    this.classList.toggle("active");
-    if ($('body').hasClass("is-expanded")) {
-      $('body').removeClass("is-expanded")
-    } else {
-      $('body').addClass("is-expanded")
-    }
+  
+  $("#nav-toggle").on("click", function() {
+    toggleNavigation();
+  });
+
+  $(".nav-item").on("click", function(e) {
+    toggleNavigation();
+    $.scrollTo(
+      '.' + $(e.currentTarget).attr('data-target'), {duration:500});
   });
 });
 
