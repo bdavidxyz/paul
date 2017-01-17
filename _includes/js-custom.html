@@ -19,6 +19,15 @@
   //     getWidthFrom:'.w150p'
   //   });
   // });
-
+$(document).ready(function(){
+document.querySelector( "#nav-toggle" ).addEventListener( "click", function() {
+    this.classList.toggle("active");
+    if ($('body').hasClass("is-expanded")) {
+      $('body').removeClass("is-expanded")
+    } else {
+      $('body').addClass("is-expanded")
+    }
+  });
+});
 
 </script>
