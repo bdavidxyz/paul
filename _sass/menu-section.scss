@@ -38,9 +38,15 @@
   display: none;
 }
 
-.is-expanded .menu-section-container-nav {
-  display: block;
+.is-sticky.is-expanded .menu-section-container-nav {
+  display: flex;
   margin-bottom: auto;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  & .item {
+    margin-right: 15px;
+  }
 }
 
 
