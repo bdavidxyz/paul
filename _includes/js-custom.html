@@ -40,6 +40,10 @@ $(document).ready(function(){
     $.scrollTo(
       '.' + $(e.currentTarget).attr('data-target'), {duration:500});
   });
+
+  $( window ).resize(function() {
+    $('.main-cta').width('auto');
+  });
 });
 
 </script>

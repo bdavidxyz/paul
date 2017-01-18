@@ -20,7 +20,7 @@ input[type="button"] {
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
-  border-radius: 20px;
+  border-radius: 6px;
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
@@ -71,7 +71,7 @@ button.main-cta {
  padding: 0 10px;
  @include respond-to("tiny-up") {
   padding: 0 15px;
-  font-size: $medium-plus-value;
+  font-size: $medium-value;
  } 
 }
 
