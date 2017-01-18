@@ -4,11 +4,15 @@
     responsiveWidth: true,
     getWidthFrom:'.w150p'
   });
-  $('.main-cta').on('sticky-start', function() { 
+  $('.main-cta').on('sticky-start', function() {
+    $('.secondary-cta').css('display', 'none');
+    $('.main-cta').css('margin-top', '2.1rem');
     $('.main-cta').text('Github');
     $('body').toggleClass('is-sticky');
   });
   $('.main-cta').on('sticky-end', function() { 
+    $('.secondary-cta').css('display', '');
+    $('.main-cta').css('margin-top', '');
     $('.main-cta').text('Get it from Github');
     $('body').toggleClass('is-sticky');
   });
@@ -42,7 +46,9 @@ $(document).ready(function(){
   });
 
   $( window ).resize(function() {
-    $('.main-cta').width('auto');
+    if ( ! $('body').hasClass("is-sticky") ) {
+      $('.main-cta').width('auto');
+    }
   });
 });
 
