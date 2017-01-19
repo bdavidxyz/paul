@@ -20,15 +20,21 @@
 function toggleNavigation() {
 
   if ($('body').hasClass("is-expanded")) {
-    $('body').removeClass("is-expanded")
+    $('body').removeClass("is-expanded");
+    $('.menu-section-container-nav').css({display:'none', opacity:0});
   } else {
-    $('body').addClass("is-expanded")
+    $('body').addClass("is-expanded");
+    $('.menu-section-container-nav').css({display:'flex'});
+    setTimeout(function () {
+      $('.menu-section-container-nav').css({opacity:1});
+    }, 500);
+    
   }
 
   if ($('#nav-toggle').hasClass("active")) {
-    $('#nav-toggle').removeClass("active")
+    $('#nav-toggle').removeClass("active");
   } else {
-    $('#nav-toggle').addClass("active")
+    $('#nav-toggle').addClass("active");
   }
 
 }

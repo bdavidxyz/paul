@@ -35,12 +35,7 @@
 }
 
 .menu-section-container-nav {
-  display: none;
   opacity: 0;
-}
-
-.is-sticky.is-expanded .menu-section-container-nav {
-  opacity: 1;
   display: flex;
   margin-bottom: auto;
   flex-direction: column;
@@ -49,6 +44,11 @@
   & .item {
     margin-right: 15px;
   }
+  transition: opacity 1s ease;
+}
+
+.is-sticky.is-expanded .menu-section-container-nav {
+
 }
 
 
