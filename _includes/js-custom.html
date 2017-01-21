@@ -58,4 +58,42 @@ $(document).ready(function(){
   });
 });
 
+
+
+
+var $loadEmailButton = $('.load-email-button')[0];
+var $contactForm = $('#contact-form');
+var DEFAULT_TEXT_CONTENT = 'Join the party';
+
+$contactForm.submit(
+  function (e) {
+    e.preventDefault();
+    $loadEmailButton.textContent = 'Please wait...';
+    var emailValue = $('.load-email-enter').val();
+    var honeyPotValue = $('.load-email-enter-fake').val();
+    if (honeyPotValue === '') {
+      $.ajax({
+        url: 'https://formspree.io/bdavidxyz@gmail.com',
+        method: 'POST',
+        data: { email: emailValue },
+        dataType: 'json',
+        success: function () {
+          $loadEmailButton.classList.add('load-email-button-is-active');
+          $('.first-page-email-enter').attr('disabled', 'disabled');
+          $('button.load-email-button').attr('disabled', 'disabled');
+          $loadEmailButton.textContent = DEFAULT_TEXT_CONTENT;
+        },
+        error: function () {
+          $loadEmailButton.classList.add('load-email-button-is-error');
+          setTimeout(function () {
+            $('.first-page-email-enter').val('');
+            $loadEmailButton.classList.remove('load-email-button-is-error');
+            $loadEmailButton.textContent = DEFAULT_TEXT_CONTENT;
+          }, 5000);
+        }
+      });
+    }
+  }
+);
+
 </script>
