@@ -15,6 +15,8 @@
     $('.main-cta').css('margin-top', '');
     $('.main-cta').text('Get it from Github');
     $('body').toggleClass('is-sticky');
+    $('body').removeClass("is-expanded");
+    $('.menu-section-container-nav').css({display:'none', opacity:0});
   });
 
 function toggleNavigation() {
@@ -73,7 +75,7 @@ $contactForm.submit(
     var honeyPotValue = $('.load-email-enter-fake').val();
     if (honeyPotValue === '') {
       $.ajax({
-        url: 'https://formspree.io/bdavidxyz@gmail.com',
+        url: 'https://formspree.io/{{site.formspree_id}}',
         method: 'POST',
         data: { email: emailValue },
         dataType: 'json',

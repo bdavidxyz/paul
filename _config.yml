@@ -5,8 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically.
 
 # Site settings
-title: Title for Impatient-Jekyll
-email: your-email@domain.com
+title: Simplest Start-up Starter
+email: bdavidxyz@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -22,3 +22,6 @@ exclude:
   - package.json
   - node_modules
   - gulpfile.js
+
+crisp_im_id: "37379e5a-25bc-4d67-b065-a91fdaef6f83"
+formspree_id: "bdavidxyz@gmail.com"
