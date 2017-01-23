@@ -5,7 +5,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  transition: all 1s ease;
+  transition: background-color 500ms ease;
   display: inline-block;
   height: 78px;
   padding: 0 30px;
