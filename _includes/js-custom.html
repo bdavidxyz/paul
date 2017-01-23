@@ -1,5 +1,5 @@
 <script type="text/javascript">
-  console.log('hello, custom message from Jekyll startup starter');
+  console.log('hello, welcome to the simplest start-up starter');
   $(".main-cta").sticky({
     responsiveWidth: true,
     getWidthFrom:'.w150p'
@@ -98,5 +98,22 @@ $contactForm.submit(
     }
   }
 );
+
+var fontA = new FontFaceObserver('Open Sans', {weight: 400});
+var fontB = new FontFaceObserver('Open Sans', {weight: 700});
+var fontC = new FontFaceObserver('Lora', {weight: 400});
+
+Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
+  console.log('Family A & B & C have loaded');
+});
+
+var font = new FontFaceObserver('Open Sans', {
+  weight: 400
+});
+font.load().then(function () {
+  console.log('Font is available');
+}, function () {
+  console.log('Font is not available');
+});
 
 </script>
