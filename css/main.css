@@ -416,7 +416,7 @@ body {
 a {
   color: #555; }
   a:focus, a:hover, a:active {
-    color: #1EAEDB; }
+    color: #057cb2; }
 
 ul,
 ol {
@@ -1908,6 +1908,9 @@ ul.is-unstyled, ul.unstyled {
   /* layouts for large screens */
   .v-large-visible {
     display: block !important; } }
+h1, .h1-like {
+  font-weight: 800; }
+
 h3, .h3-like {
   font-family: "Open Sans", sans-serif; }
 
@@ -1972,23 +1975,22 @@ h4, .h4-like {
   flex-direction: row-reverse;
   align-items: flex-start;
   width: 100%;
-  height: 90px;
+  height: 66px;
   margin-bottom: auto; }
 
 .menu-section-container-nav {
-  display: none; }
-
-.is-sticky.is-expanded .menu-section-container-nav {
+  opacity: 0;
   display: flex;
   margin-bottom: auto;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center; }
-  .is-sticky.is-expanded .menu-section-container-nav .item {
+  align-items: center;
+  transition: opacity 0.8s ease; }
+  .menu-section-container-nav .item {
     margin-right: 15px; }
 
 .menu-section-hamburger {
-  margin-top: 3.25rem;
+  margin-top: 2.1rem;
   display: none; }
 
 .is-sticky .menu-section {
@@ -1996,7 +1998,7 @@ h4, .h4-like {
   left: 0;
   top: 0;
   background-color: white;
-  height: 90px;
+  height: 66px;
   z-index: 0;
   box-shadow: 0 calc(8px / 2) 8px rgba(0, 0, 0, 0.05);
   transition: all 0.6s ease; }
@@ -2026,8 +2028,8 @@ h4, .h4-like {
   padding: 10px 35px 16px 0px; }
 .menu-section #nav-toggle span, .menu-section #nav-toggle span:before, .menu-section #nav-toggle span:after {
   cursor: pointer;
-  border-radius: 1px;
-  height: 5px;
+  border-radius: 6px;
+  height: 6px;
   width: 35px;
   background: #555;
   position: absolute;
@@ -2055,7 +2057,7 @@ button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  transition: all 1s ease;
+  transition: background-color 500ms ease;
   display: inline-block;
   height: 78px;
   padding: 0 30px;
@@ -2095,8 +2097,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #07a6ed;
+  border-color: #07a6ed; }
 
 .button.button-primary:hover,
 button.button-primary:hover,
@@ -2109,8 +2111,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #057cb2;
+  border-color: #057cb2; }
 
 .hero-fold-hack {
   margin-top: 20vh; }
@@ -2218,7 +2220,7 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 .pricing-why {
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   border-bottom: 1px dashed lightgray;
   text-align: center; }
 
@@ -2226,3 +2228,183 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   border-bottom: 1px dashed lightgray; }
+
+ /* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  height: 78px;
+  font-size: 2rem;
+  padding: 6px 10px;
+  /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #D1D1D1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box; }
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px; }
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #33C3F0;
+  outline: 0; }
+
+label,
+legend {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: 600; }
+
+fieldset {
+  padding: 0;
+  border-width: 0; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline; }
+
+label > .label-body {
+  display: inline-block;
+  margin-left: .5rem;
+  font-weight: normal; }
+
+.load-email__form {
+  flex-direction: column;
+  align-items: center; }
+  @media screen and (min-width: 768px) {
+    .load-email__form {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start; } }
+
+.contact-section .load-email-enter {
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 1rem;
+  text-align: center; }
+  @media screen and (min-width: 768px) {
+    .contact-section .load-email-enter {
+      text-align: left;
+      width: 332px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px; } }
+
+.is-expanded .contact-section .load-email-enter {
+  z-index: -1; }
+
+@media screen and (min-width: 768px) {
+  .load-email-button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px; } }
+
+/* Button
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.load-email-button {
+  outline: none;
+  box-shadow: 1px 1px 4px 1px transparent;
+  transition: box-shadow 300ms ease-in-out; }
+  @media (min-width: 992px) {
+    .load-email-button {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px; } }
+
+.load-email-button:hover {
+  box-shadow: 1px 1px 6px 1px #ccc; }
+
+.load-email-button:before {
+  content: '\00a0\00a0\00a0\00a0 Thank you';
+  position: absolute;
+  z-index: 500;
+  transform: rotateX(180deg);
+  color: #fff;
+  letter-spacing: 1px;
+  opacity: 0;
+  transition: none; }
+
+.load-email-button-is-error:before {
+  content: '\00a0\00a0\00a0\00a0 Error'; }
+
+.load-email-button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  opacity: 0;
+  height: 100%;
+  overflow: hidden;
+  background-color: #0EBEFF;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: width 10ms 600ms ease-in-out, background-color 300ms ease-in, opacity 250ms 300ms ease-in; }
+
+.load-email-button-is-active {
+  transform: rotateX(180deg);
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 1px transparent !important;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in; }
+
+.load-email-button-is-active:after {
+  opacity: 1;
+  background-color: green;
+  width: 100%;
+  transition: width 1s 0.5s ease-in-out, background-color 300ms 300ms ease-in, opacity 250ms 300ms ease-in; }
+
+.load-email-button-is-active:before {
+  opacity: 1;
+  transition: opacity 250ms 1.5s ease-in; }
+
+.load-email-button-is-error {
+  transform: rotateX(180deg);
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 1px transparent !important;
+  transition: transform 300ms ease-in-out, background-color 300ms ease-in; }
+
+.load-email-button-is-error:after {
+  opacity: 1;
+  background-color: red;
+  width: 100%;
+  transition: width 1s 0.5s ease-in-out, background-color 300ms 300ms ease-in, opacity 250ms 300ms ease-in; }
+
+.load-email-button-is-error:before {
+  opacity: 1;
+  transition: opacity 250ms 1.5s ease-in; }
+
+.footer-section {
+  background-color: #F5F5F5;
+  font-family: "Open Sans", sans-serif; }
