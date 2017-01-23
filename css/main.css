@@ -410,7 +410,7 @@ body {
   font-size: 1.6rem;
   background-color: #fff;
   color: #555;
-  font-family: "Lora", sans-serif;
+  font-family: sans-serif;
   line-height: 1.5; }
 
 a {
@@ -450,12 +450,10 @@ figure {
   line-height: 1.5; }
 
 h1, .h1-like {
-  font-size: 3.2rem;
-  font-family: "Open Sans", sans-serif; }
+  font-size: 3.2rem; }
 
 h2, .h2-like {
-  font-size: 2.8rem;
-  font-family: "Open Sans", sans-serif; }
+  font-size: 2.8rem; }
 
 h3, .h3-like {
   font-size: 2.4rem; }
@@ -1911,12 +1909,6 @@ ul.is-unstyled, ul.unstyled {
 h1, .h1-like {
   font-weight: 800; }
 
-h3, .h3-like {
-  font-family: "Open Sans", sans-serif; }
-
-h4, .h4-like {
-  font-family: "Open Sans", sans-serif; }
-
 .big, .pricing-actual, .pricing-feature {
   font-size: 1.25em; }
 
@@ -2020,8 +2012,10 @@ h4, .h4-like {
   transition: all .3s ease .15s; }
 
 .nav-item {
-  cursor: pointer;
-  margin-bottom: 1vh; }
+  cursor: pointer; }
+
+.menu-nav-item {
+  margin-bottom: 2vh; }
 
 .menu-section #nav-toggle {
   cursor: pointer;
@@ -2064,7 +2058,6 @@ input[type="button"] {
   color: #555;
   text-align: center;
   font-size: 2rem;
-  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   line-height: 38px;
   letter-spacing: .1rem;
@@ -2219,14 +2212,12 @@ blockquote.twitter-tweet a[href^="https://twitter.com"] {
 
 .pricing-why {
   font-weight: bold;
-  font-family: "Open Sans", sans-serif;
   font-size: 2rem;
   border-bottom: 1px dashed lightgray;
   text-align: center; }
 
 .pricing-feature {
   text-align: center;
-  font-family: "Open Sans", sans-serif;
   border-bottom: 1px dashed lightgray; }
 
  /* Forms
@@ -2247,7 +2238,6 @@ select {
   background-color: #fff;
   border: 1px solid #D1D1D1;
   border-radius: 4px;
-  box-shadow: none;
   box-sizing: border-box; }
 
 /* Removes awkward default styles on some inputs for iOS */
@@ -2259,8 +2249,6 @@ input[type="tel"],
 input[type="url"],
 input[type="password"],
 textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none; }
 
 textarea {
@@ -2333,18 +2321,13 @@ label > .label-body {
 /* Button
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .load-email-button {
-  outline: none;
-  box-shadow: 1px 1px 4px 1px transparent;
-  transition: box-shadow 300ms ease-in-out; }
+  outline: none; }
   @media (min-width: 992px) {
     .load-email-button {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       border-top-right-radius: 5px;
       border-bottom-right-radius: 5px; } }
-
-.load-email-button:hover {
-  box-shadow: 1px 1px 6px 1px #ccc; }
 
 .load-email-button:before {
   content: '\00a0\00a0\00a0\00a0 Thank you';
@@ -2376,7 +2359,6 @@ label > .label-body {
 .load-email-button-is-active {
   transform: rotateX(180deg);
   background-color: #fff;
-  box-shadow: 1px 1px 4px 1px transparent !important;
   transition: transform 300ms ease-in-out, background-color 300ms ease-in; }
 
 .load-email-button-is-active:after {
@@ -2392,7 +2374,6 @@ label > .label-body {
 .load-email-button-is-error {
   transform: rotateX(180deg);
   background-color: #fff;
-  box-shadow: 1px 1px 4px 1px transparent !important;
   transition: transform 300ms ease-in-out, background-color 300ms ease-in; }
 
 .load-email-button-is-error:after {
@@ -2407,4 +2388,38 @@ label > .label-body {
 
 .footer-section {
   background-color: #F5F5F5;
-  font-family: "Open Sans", sans-serif; }
+  font-family: sans-serif; }
+
+.footer-nav-item {
+  cursor: pointer; }
+
+.footer-nav-item:hover {
+  color: #057cb2; }
+
+.fonts-loaded h1, .fonts-loaded .h1-like {
+  font-family: "Open Sans"; }
+
+.fonts-loaded h2, .fonts-loaded .h2-like {
+  font-family: "Open Sans"; }
+
+.fonts-loaded h3, .fonts-loaded .h3-like {
+  font-family: "Open Sans"; }
+
+.fonts-loaded h4, .fonts-loaded .h4-like {
+  font-family: "Open Sans"; }
+
+.fonts-loaded h5, .fonts-loaded .h5-like {
+  font-family: "Open Sans"; }
+
+.fonts-loaded body {
+  font-family: "Lora"; }
+
+.fonts-loaded .pricing-feature {
+  font-family: "Open Sans"; }
+
+.fonts-loaded .button,
+.fonts-loaded button,
+.fonts-loaded input[type="submit"],
+.fonts-loaded input[type="reset"],
+.fonts-loaded input[type="button"] {
+  font-family: "Open Sans"; }
